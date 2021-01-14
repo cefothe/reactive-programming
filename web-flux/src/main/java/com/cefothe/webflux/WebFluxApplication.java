@@ -1,18 +1,8 @@
 package com.cefothe.webflux;
 
-import lombok.ToString;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.reactive.config.EnableWebFlux;
-import reactor.core.publisher.Flux;
 
 @SpringBootApplication
 @EnableWebFlux
