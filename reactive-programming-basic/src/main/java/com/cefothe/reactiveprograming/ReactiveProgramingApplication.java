@@ -1,44 +1,26 @@
 package com.cefothe.reactiveprograming;
 
-import org.reactivestreams.Subscriber;
-import org.reactivestreams.Subscription;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
-import reactor.core.scheduler.Scheduler;
-import reactor.core.scheduler.Schedulers;
-
 import java.util.stream.Stream;
-
-@SpringBootApplication
 
 public class ReactiveProgramingApplication {
 
 
-	@Bean
-	ApplicationRunner runnerr(){
-		return  args -> {
-			Flux<String> flux = Flux.just("red", "white", "blue");
 
-			Stream<String>  stream = Stream.of("red", "white", "blue");
+	public static void main(String[] args) {
+		Flux<String> flux = Flux.just("red", "white", "blue");
 
-			Stream<String> upperStream = stream.map(value -> {
-				System.out.println(value);
-				return value.toUpperCase();
-			});
+		Stream<String>  stream = Stream.of("red", "white", "blue");
 
-		};
-
+		Stream<String> upperStream = stream.map(value -> {
+			System.out.println(value);
+			return value.toUpperCase();
+		});
 	}
 
 
-//	@Bean
-//	ApplicationRunner runner(){
-//		return args -> {
-//			Flux<String> flux = Flux.just("red", "white", "blue");
+//	public static void main(String[] args) {
+		//			Flux<String> flux = Flux.just("red", "white", "blue");
 //
 //			Flux<String> upper = flux
 //					.log()
@@ -127,7 +109,6 @@ public class ReactiveProgramingApplication {
 //		};
 //	}
 
-	public static void main(String[] args) {
-		SpringApplication.run(ReactiveProgramingApplication.class, args);
-	}
+//	}
+
 }
